@@ -26,7 +26,7 @@
 
 body {
   background-image: url(../img/bg.jpg);
-  background-position: center center;
+  background-position: top 43% left 61%;
   background-size: cover;
   background-repeat: no-repeat;
   margin: 0;
@@ -38,7 +38,7 @@ body {
 }
 
 .table-tour {
-  padding: 8px 0 0 100px;
+  padding: 8px 50px 0 50px;
   width: 100%;
   height: 100%;
   display: flex;
@@ -66,6 +66,7 @@ body {
   align-items: center;
   position: relative;
   z-index: 3;
+  width: 100%;
 }
 
 .grid--group-b {
@@ -73,24 +74,23 @@ body {
 }
 
 .grid__level {
-  width: 200px;
-  margin: 0 40px 0 0;
+  width: 100%;
+  max-width: 450px;
+  margin: 0 2% 0 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .grid__item {
-  border: 1px solid #d3d4d4;
-  border-radius: 8px;
-  background-color: #fff;
+  background-color: #efefef;
   width: 100%;
-  max-width: 200px;
+  max-width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 0 12px;
-  padding: 8px 10px;
+  margin: 0;
+  padding: 24px 16px;
   min-height: 50px;
   box-sizing: border-box;
 }
@@ -100,16 +100,31 @@ body {
 }
 
 .grid__level-title {
-  font-size: 20px;
+  font-size: 16px;
   text-align: center;
   color: #fff;
   font-weight: normal;
   font-family: 'Rubik', Verdana, sans-serif;
 }
 
+.grid__body {
+  width: 100%;
+}
+
 .grid__box {
   padding: 4px;
   margin: 0 0 32px;
+  max-width: 400px;
+}
+
+.grid__box .grid__item:first-child {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.grid__box .grid__item:last-child {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
 .grid__box:last-child {
@@ -133,11 +148,11 @@ body {
 }
 
 .team__flag {
-  margin: 0 4px 0 0;
+  margin: 0 8px 0 0;
   padding: 0;
   background-color: #adadad;
-  width: 20px;
-  height: 15px;
+  width: 30px;
+  height: 22px;
 }
 
 .team__flag img {
@@ -146,8 +161,9 @@ body {
 }
 
 .team__title {
-  font-size: 14px;
-  line-height: 21px;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 22px;
   margin: 0;
   padding: 0;
   color: #222;
@@ -164,10 +180,10 @@ body {
 .table-tour__winner .team__title::before {
   content: '';
   position: absolute;
-  right: 0;
+  right: 37%;
   bottom: 100%;
-  width: 16px;
-  height: 30px;
+  width: 30px;
+  height: 50px;
   background-image: url(../img/cup@x2.png);
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -176,26 +192,28 @@ body {
 }
 
 @media screen and (max-width: 1024px) {
-  .grid__level {
-    width: auto;
+
+  .team__title {
+    font-size: 18px;
+    line-height: 18px;
   }
+
 }
 
 @media screen and (max-width: 768px) {
 
   .table-tour {
-    padding: 0 0 0 2%;
+    padding: 8px 24px 0 24px;
   }
 
   .grid__level {
-    width: auto;
     margin: 0 5% 0 0;
   }
 
 
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 640px) {
 
   .table-tour {
     padding: 4px;
@@ -205,6 +223,7 @@ body {
     content: '';
     width: 21px;
     height: 46px;
+    right: 0%;
   }
 
   .grid {
@@ -270,13 +289,17 @@ body {
   }
 
   .sparing .grid__item {
-    max-width: 48%;
+    max-width: 49%;
     margin: 0 4px;
     padding: 10px 4px;
   }
 
   .sparing .grid__item:first-child {
     margin-left: 0;
+  }
+
+  .grid__box .grid__item {
+    border-radius: 8px;
   }
 
   .sparing .grid__item:last-child {
@@ -295,7 +318,7 @@ body {
   }
 
   .team__title {
-    font-size: 11px;
+    font-size: 12px;
     line-height: 15px;
     margin-top: 4px;
   }
